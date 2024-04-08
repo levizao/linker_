@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Site</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container login-container"> <!-- Adicionando a classe "login-container" -->
+    <form id="loginForm">
+      <h2>Login</h2>
+      <input type="password" id="password" placeholder="Senha">
+      <button type="submit">Entrar</button>
+    </form>
+    <p class="by-line">𝚋𝚢 𝙻𝚎𝚟𝚒</p> <!-- Texto "by Levi" -->
+    <div id="ipAddress" class="ip-address">Carregando informações...</div> <!-- Exibe o endereço IP -->
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    // Função para obter a hora, data e endereço IP do cliente
+    function getDateTimeIP() {
+      fetch('https://api.ipify.org?format=json')
+        .then(response => response.json())
+        .then(data => {
+          var date = new Date();
+          var hour = ('0' + date.getHours()).slice(-2);
+          var minute = ('0' + date.getMinutes()).slice(-2);
+          var second = ('0' + date.getSeconds()).slice(-2);
+          var dateString = date.toLocaleDateString('pt-BR');
+          document.getElementById('ipAddress').textContent = "Hora: " + hour + ":" + minute + ":" + second + " | Dia: " + dateString + " | IP: " + data.ip;
+        })
+        .catch(error => {
+          console.error('Ocorreu um erro ao obter as informações:', error);
+          document.getElementById('ipAddress').textContent = "Não foi possível obter as informações.";
+        });
+    }
+
+    // Chamando a função para obter a hora, data e endereço IP
+    getDateTimeIP();
+
+    // Atualizar a hora a cada segundo
+    setInterval(getDateTimeIP, 1000);
+  </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+/* Estilos para o container de construção */
+.construction-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Estilos para o texto de construção */
+.construction-text {
+  color: #0c1892;
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Estilos para o gif de construção */
+.construction-gif {
+  max-width: 100%;
+}
+
+/* Estilos para o timer de sessão */
+.session-timer {
+  font-family: Arial, sans-serif; /* Mesma fonte do título */
+  font-size: 18px; /* Tamanho da fonte */
+  margin-top: 10px; /* Margem superior */
+  color: #0c1892; /* Cor do texto */
+}

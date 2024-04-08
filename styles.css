@@ -1,0 +1,81 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('login.gif'); /* Adicionando o arquivo login.gif como fundo */
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  text-align: center;
+  background-color: #0B0C18; /* Fundo azul escuro acinzentado */
+  padding: 60px; /* Aumentando o padding */
+  border-radius: 12px; /* Aumentando o raio da borda */
+  width: 500px; /* Aumentando a largura do container */
+}
+
+.login-container {
+  background-color: #0B0C18; /* Fundo azul escuro acinzentado */
+}
+
+form {
+  padding: 30px; /* Aumentando o padding */
+}
+
+input {
+  width: calc(100% - 60px); /* Aumentando a largura da caixa de texto */
+  padding: 20px; /* Aumentando o padding */
+  margin-bottom: 30px; /* Aumentando a margem inferior */
+  border: 1px solid #555; /* Mudando a cor da borda */
+  border-radius: 6px; /* Aumentando o raio da borda */
+  font-size: 20px; /* Aumentando o tamanho da fonte */
+}
+
+button {
+  width: calc(100% - 60px); /* Aumentando a largura do botão */
+  padding: 20px; /* Aumentando o padding */
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 6px; /* Aumentando o raio da borda */
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 20px; /* Aumentando o tamanho da fonte */
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+h2 {
+  margin-bottom: 40px; /* Aumentando a margem inferior */
+  color: #fff; /* Mudando a cor do título para branco */
+}
+
+.by-line {
+  color: #ccc; /* Mudando a cor do texto "by Levi" para um tom mais claro */
+  font-size: 16px; /* Aumentando o tamanho da fonte */
+  margin-top: 30px; /* Aumentando a margem superior */
+}
+
+.date-time-ip-container {
+  position: fixed;
+  bottom: 20px; /* Aumentando a distância do rodapé */
+  right: 20px; /* Aumentando a distância da margem direita */
+  color: #ccc; /* Mudando a cor do texto de data/hora/IP para um tom mais claro */
+  font-size: 16px; /* Aumentando o tamanho da fonte */
+}
+
+/* Estilos para o endereço IP */
+.ip-address {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: white; /* Cor branca */
+  font-size: 14px; /* Tamanho de fonte menor */
+}
